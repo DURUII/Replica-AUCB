@@ -73,7 +73,7 @@ if __name__ == '__main__':
             results[algo_styles[algo_label]['label']]['rounds'].append(rounds)
 
     # Plotting the results
-    fig, axs = plt.subplots(3, 2, figsize=(22, 14.5))
+    fig, axs = plt.subplots(3, 2, figsize=(12.5, 10.5))
 
     # Line plots for budget vs rewards and rounds
     for algo_label, style in algo_styles.items():
@@ -148,11 +148,7 @@ if __name__ == '__main__':
         ax.set_ylabel('Total Rewards' if i % 2 == 0 else 'Total Rounds')
         ax.set_title(
             f'Fig. {i + 1}. Total {("rewards" if i % 2 == 0 else "rounds")} vs. {"budget" if i < 2 else ("N" if i < 4 else "K")}')
-        ax.legend()
-
-    # Adjust legends and layout
-    for ax in axs.flat:
-        ax.legend()
+        ax.legend(bbox_to_anchor=(0, 1.02, 1, 0.2), loc="upper left", mode="expand", ncol=5)
         ax.grid(True)
 
     plt.tight_layout()
