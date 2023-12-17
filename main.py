@@ -82,9 +82,12 @@ for X, ax in zip(['N', 'K'], [axes[1, 0], axes[2, 0]]):
         xpos = np.arange(len(data.index)) + (i - n_algos / 2) * config.bar_width
         ax.bar(xpos, data[algo], width=config.bar_width, **config.bar_styles[algo])
 
-        ax.set_xlabel('Total rewards')
-        ax.set_xticks(range(len(data.index)))
-        ax.set_xticklabels(data.index)
+    ax.set_ylabel('Total rewards')
+    ax.set_xticks(range(len(data.index)))
+    ax.set_xticklabels(data.index)
+
+axes[1, 0].set_xlabel('Number of arms (N)')
+axes[2, 0].set_xlabel('Parameter (K)')
 
 for i, ax in enumerate(axes.flat):
     ax.legend()
