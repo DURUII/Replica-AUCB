@@ -3,6 +3,7 @@ import random
 import numpy as np
 
 from arms import StrategicArm
+from emulator import Emulator
 
 
 class Config:
@@ -22,4 +23,14 @@ class Config:
         'separated': {'color': '#3753a4', 'marker': '^', 'label': 'separated'},
         '0.1-first': {'color': '#097f80', 'marker': 'v', 'label': '0.1-first'},
         '0.5-first': {'color': '#ba529e', 'marker': '<', 'label': '0.5-first'},
+    }
+
+    # bar style
+    bar_width = 0.15
+    bar_styles = {
+        'AUCB': {'color': '#060506', 'label': 'AUCB', 'hatch': ''},
+        'optimal': {'color': '#ed1e25', 'label': 'optimal', 'hatch': '|||||'},
+        'separated': {'color': '#3753a4', 'label': 'separated', 'hatch': '/////'},
+        '0.1-first': {'color': '#097f80', 'label': '0.1-first', 'hatch': '\\\\\\\\\\'},
+        '0.5-first': {'color': '#ba529e', 'label': '0.5-first', 'hatch': '-----'},
     }
