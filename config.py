@@ -29,8 +29,8 @@ class Config:
     bar_width = 0.15
     bar_styles = {
         'AUCB': {'color': '#060506', 'label': 'AUCB', 'hatch': ''},
-        'optimal': {'color': '#ed1e25', 'label': 'optimal', 'hatch': '|||||'},
+        'optimal': {'color': '#ed1e25', 'label': 'optimal', 'hatch': '||||'},
         'separated': {'color': '#3753a4', 'label': 'separated', 'hatch': '/////'},
         '0.1-first': {'color': '#097f80', 'label': '0.1-first', 'hatch': '\\\\\\\\\\'},
-        '0.5-first': {'color': '#ba529e', 'label': '0.5-first', 'hatch': '-----'},
+        '0.5-first': {'color': '#ba529e', 'label': '0.5-first', 'hatch': '---'},
     }
