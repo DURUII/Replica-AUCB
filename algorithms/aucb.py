@@ -51,7 +51,7 @@ class AUCB(BaseAlgorithm):
 
             # Calculate UCB values for each arm (r̂_i(t-1)) (Equation 8)
             # TODO Review this Equation, because it is incompatible with code in BanditsBook
-            u = np.sqrt((self.K + 1) * (np.log(self.t)) / self.beta)
+            u = np.sqrt((self.K + 1) * (np.log(self.t - 1)) / self.beta)
             r_hat = self.r_bar + u
 
             # Sort and select the top K arms based on the rules (Line 7-9)

@@ -20,7 +20,7 @@ class BaseAlgorithm(metaclass=ABCMeta):
         self.N = n_arms  # N, the number of total arms
         self.K = n_selected  # K, the number of arms selected in a round
         self.B = budget  # B, budget
-        self.t = 0  # t, the indexes for round
+        self.t = 1  # t, the indexes for round
         self.R = 0.0  # r, total reward
 
     @abstractmethod
