@@ -89,4 +89,4 @@ for X, ax in zip(['N', 'K'], [axes[1, 0], axes[2, 0]]):
 for i, ax in enumerate(axes.flat):
     ax.legend()
 
-plt.savefig('fig.pdf')
+plt.savefig('fig.jpg', dpi=800)
